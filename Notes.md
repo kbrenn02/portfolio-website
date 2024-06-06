@@ -27,3 +27,10 @@ Create the theme how you like it, copy the code, and add it to the global CSS fi
 Once the global.css file is updated, update the tailwind.config.ts file so all the theme elements align when using tailwind.
 
 ### Build the website itself
+1. Update the MetaData in the layout.tsx file
+2. To update the homepage, remove all code from the page.tsx file
+3. Run `npm run dev` to launch
+
+### Syntax notes
+- Tailwind classes are mobile first
+- sections are similar to divs
