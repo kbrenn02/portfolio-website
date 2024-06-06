@@ -2,10 +2,11 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: "class",
+//   the content section is the structure of the website and should match what I have. Because I have files
+//   in the app and src folders, we need to make sure the formatting is applied to those folders
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
