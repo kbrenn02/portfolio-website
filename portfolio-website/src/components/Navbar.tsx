@@ -9,6 +9,7 @@ export default function Navbar() {
                 {/* recommend single page if using free OpenAI account */}
                 <Link href="/">Home</Link>
                 <Link href="/about">About Me</Link>
+                <Link href="/projects">Projects</Link>
                 <Link href="/social">Social Media</Link>
             </nav>
         </div>
