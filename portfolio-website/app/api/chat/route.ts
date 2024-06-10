@@ -1,7 +1,7 @@
-import { StreamingTextResponse } from "ai";
+import { OpenAIStream, StreamingTextResponse } from "ai";
 import { ChatCompletionMessageParam } from "ai/prompts";
-// import OpenAI from "openai";
-import { openai, createOpenAI } from '@ai-sdk/openai';
+import OpenAI from "openai";
+// import { openai, createOpenAI } from '@ai-sdk/openai';
 
 export async function POST(req: Request) {
     
@@ -9,10 +9,10 @@ export async function POST(req: Request) {
         const body = await req.json();
         const messages = body.messages;
 
-        // const openai = new OpenAI();
-        const ai = openai({
-            apiKey: process.env.OPENAI_API_KEY,
-          });
+        const openai = new OpenAI();
+        // const ai = openai({
+        //     apiKey: process.env.OPENAI_API_KEY,
+        //   });
 
         const systemMessage: ChatCompletionMessageParam = {
             role: 'system',
@@ -20,17 +20,17 @@ export async function POST(req: Request) {
             content: 'You are a sarcasm bot. You answer all user questions in a sarcastic way.'
         }
 
-        const response = await createOpenAI({
+        const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             stream: true,
             messages: [systemMessage, ...messages]
         })
 
-        const stream = OpenAIS(response);
+        const stream = OpenAIStream(response);
         return new StreamingTextResponse(stream);
 
     } catch (error) {
-        return Response.json({error: "Internal server error"})
+        return Response.json({ error: "Internal server error" }, { status: 500 })
     }
 
 }
