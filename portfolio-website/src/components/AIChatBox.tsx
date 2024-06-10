@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Message, useChat } from "ai/react";
 import { cn } from "@/src/libs/utils";
 import { Bot, SendHorizonal, Trash, XCircle } from "lucide-react";
@@ -22,6 +22,22 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
     error,
   } = useChat(); // the default api endpoint is '/api/chat'
 
+  const inputRef = useRef<HTMLInputElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+        // this code is needed to scroll down in chatbox
+        scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [messages])
+
+  useEffect(() => {
+    if (open) {
+        inputRef.current?.focus();
+    }
+  }, [open])
+
   // this messages array could be empty, so we put the ? at the end of the array call. If it's not empty, then we're checking
   // the role of who sent the last message
   const lastMessageIsUser = messages[messages.length - 1]?.role === 'user';
@@ -37,7 +53,7 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
         <XCircle size={30} className="rounded-full bg-background" />
       </button>
       <div className="rounder flex h-[600px] flex-col border bg-background shadow-xl">
-        <div className="mt-3 h-full overflow-y-auto px-3">
+        <div className="mt-3 h-full overflow-y-auto px-3" ref={scrollRef}>
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
           ))}
@@ -94,6 +110,7 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
             placeholder="Say something..."
             className="grow border rounded bg-background px-3 py-2"
             type="text" 
+            ref={inputRef}
           />
           <button
             type="submit"
