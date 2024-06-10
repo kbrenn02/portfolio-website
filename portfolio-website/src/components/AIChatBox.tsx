@@ -1,7 +1,7 @@
 import React from "react";
 import { Message, useChat } from "ai/react";
 import { cn } from "@/src/libs/utils";
-import { Bot, XCircle } from "lucide-react";
+import { Bot, SendHorizonal, Trash, XCircle } from "lucide-react";
 // this useChat hook is coming from Vercel.ai SDK that I already installed
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
@@ -22,6 +22,10 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
     error,
   } = useChat(); // the default api endpoint is '/api/chat'
 
+  // this messages array could be empty, so we put the ? at the end of the array call. If it's not empty, then we're checking
+  // the role of who sent the last message
+  const lastMessageIsUser = messages[messages.length - 1]?.role === 'user';
+
   return (
     <div
       className={cn(
@@ -37,6 +41,30 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
           ))}
+
+
+          {/* If the user asked a question, and before the ai chatbox as responded, this is the loading screen while
+          it's "thinking." Also gives an error message if there is an error */}
+          {isLoading && lastMessageIsUser && (
+            <ChatMessage
+                message = {{
+                    id: 'loading',
+                    role: 'assistant',
+                    content: 'Thinking...',
+                }}
+            />
+          )}
+          {error && (
+            <ChatMessage
+                message={{
+                    id: 'error',
+                    role: 'assistant',
+                    content: 'Something went wrong. Please try again.',
+                }}
+            />
+          )}
+
+          {/* This is the view if there are no messages and no errors, aka the user hasn't started typing */}
           {!error && messages.length === 0 && (
             <div className="mx-8 flex h-full flex-col items-center justify-center gap-3 text-center">
               <Bot size={28} />
@@ -50,6 +78,34 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
             </div>
           )}
         </div>
+
+        <form onSubmit={handleSubmit} className="m-3 flex gap-1">
+          <button
+                type="button"
+                className="flex items-center justify-center w-10 flex-none"
+                title='Clear chat'
+                onClick={() => setMessages([])}
+            >
+                <Trash size = {24} />
+          </button>
+          <input 
+            value={input}
+            onChange={handleInputChange}
+            placeholder="Say something..."
+            className="grow border rounded bg-background px-3 py-2"
+            type="text" 
+          />
+          <button
+            type="submit"
+            className="flex items-center justify-center w-10 flex-none disabled:opacity-50"
+            disabled={isLoading || input.length === 0}
+            title='Submit message'
+          >
+            <SendHorizonal size={24} />
+          </button>
+
+        </form>
+
       </div>
     </div>
   );
