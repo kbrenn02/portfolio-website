@@ -1,9 +1,10 @@
 import React from "react";
 import { Message, useChat } from "ai/react";
-import { cn } from "../libs/utils";
+import { cn } from "@/src/libs/utils";
 import { Bot, XCircle } from "lucide-react";
 // this useChat hook is coming from Vercel.ai SDK that I already installed
 import ReactMarkdown from "react-markdown";
+import Link from "next/link";
 
 interface AIChatBoxProps {
   open: boolean;
@@ -19,31 +20,7 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
     setMessages,
     isLoading,
     error,
-  } = useChat({
-    initialMessages: [
-      {
-        id: "1",
-        role: "assistant",
-        content: "Hi, I'm the chatbot!",
-      },
-      {
-        id: "2",
-        role: "user",
-        content: "Hi, I'm the user!",
-      },
-      {
-        id: "3",
-        role: "assistant",
-        content: `
-[Coding in Flow](http://codinginflow.com)
-List:
-- item 1
-- item 2
-- item 3
-`,
-      },
-    ],
-  }); // the default api endpoint is '/api/chat'
+  } = useChat(); // the default api endpoint is '/api/chat'
 
   return (
     <div
@@ -60,6 +37,18 @@ List:
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
           ))}
+          {!error && messages.length === 0 && (
+            <div className="mx-8 flex h-full flex-col items-center justify-center gap-3 text-center">
+              <Bot size={28} />
+              <p className="text-lg font-medium">
+                Send a message to start the AI chat!
+              </p>
+              <p className="text-sm text-muted-foreground">
+                You can ask the chatbot any question about me and it will find
+                the relevant information on this website.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -87,7 +76,30 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
           isAiMessage ? "bg-background" : "bg-foreground text-background",
         )}
       >
-        <ReactMarkdown>{content}</ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            // this is applying specific styling to this different components only in the chatbox
+            a: ({ node, ref, ...props }) => (
+              <Link
+                {...props}
+                href={props.href ?? ""}
+                className="text-primary hover:underline"
+              />
+            ),
+            p: ({ node, ...props }) => (
+              <p {...props} className="mt-3 first:mt-0" />
+            ),
+            ul: ({ node, ...props }) => (
+              <ul
+                {...props}
+                className="mt-3 list-inside list-disc first:mt-0"
+              />
+            ),
+            li: ({ node, ...props }) => <li {...props} className="mt-1" />,
+          }}
+        >
+          {content}
+        </ReactMarkdown>
       </div>
     </div>
   );
