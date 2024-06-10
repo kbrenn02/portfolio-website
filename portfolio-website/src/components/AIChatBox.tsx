@@ -20,7 +20,9 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
     setMessages,
     isLoading,
     error,
-  } = useChat(); // the default api endpoint is '/api/chat'
+  } = useChat({
+    api: '/api/chat'
+  }); // the default api endpoint is '/api/chat'
 
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);

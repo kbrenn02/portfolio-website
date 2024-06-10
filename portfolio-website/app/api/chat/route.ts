@@ -1,7 +1,12 @@
-import { OpenAIStream, StreamingTextResponse } from "ai";
+'use server';
+
+import { LangChainStream, StreamingTextResponse, streamText } from "ai";
 import { ChatCompletionMessageParam } from "ai/prompts";
-import OpenAI from "openai";
-// import { openai, createOpenAI } from '@ai-sdk/openai';
+import { createStreamableValue } from "ai/rsc";
+import { openai, createOpenAI } from '@ai-sdk/openai';
+import { ChatOpenAI } from "@langchain/openai";
+import { ChatPromptTemplate } from "@langchain/core/prompts"
+
 
 export async function POST(req: Request) {
     
@@ -9,28 +14,38 @@ export async function POST(req: Request) {
         const body = await req.json();
         const messages = body.messages;
 
-        const openai = new OpenAI();
-        // const ai = openai({
-        //     apiKey: process.env.OPENAI_API_KEY,
-        //   });
+        const currentMessageContent = messages[messages.length - 1].content;
 
-        const systemMessage: ChatCompletionMessageParam = {
-            role: 'system',
-            // These are instructions for the chatbot, which is why the role is system and the content is the instruction
-            content: 'You are a sarcasm bot. You answer all user questions in a sarcastic way.'
-        }
+        const {stream, handlers} = LangChainStream(); 
 
-        const response = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo",
-            stream: true,
-            messages: [systemMessage, ...messages]
+        const chatModel = new ChatOpenAI({
+            apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+            modelName: 'gpt-3.5-turbo',
+            streaming: true,
+            callbacks: [handlers]
+        });
+
+        const prompt = ChatPromptTemplate.fromMessages([
+            [
+                "system",
+                "You are a sarcasm bot. You answer all user questions in a sarcastic way."
+            ],
+            [
+                "user", "{input}"
+            ]
+        ])
+
+        const chain = prompt.pipe(chatModel);
+
+        chain.invoke({
+            input: currentMessageContent
         })
 
-        const stream = OpenAIStream(response);
-        return new StreamingTextResponse(stream);
+        
+        return new StreamingTextResponse(stream)
 
-    } catch (error) {
-        return Response.json({ error: "Internal server error" }, { status: 500 })
+        } catch (error) {
+            console.error('Error: ', error);
+            return Response.json({ error: "Internal server error" }, { status: 500 });
+        }
     }
-
-}
