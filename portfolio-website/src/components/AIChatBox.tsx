@@ -77,7 +77,7 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
                 message={{
                     id: 'error',
                     role: 'assistant',
-                    content: 'Something went wrong. Please try again.',
+                    content: 'The Chatbot is currently undergoing maintenance and is unavailable at the moment. Take a stroll through the website to find what you\'re looking for!',
                 }}
             />
           )}
