@@ -1,9 +1,18 @@
+import dotenv from 'dotenv'
+dotenv.config({path: ".env.local"})
+// Configure .env before other imports
 import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 import { TextLoader } from "langchain/document_loaders/fs/text";
 import { DocumentInterface } from "@langchain/core/documents"
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+import { getEmbeddingsCollection, getVectorStore } from "../src/libs/astradb";
 
 async function generateEmbeddings() {
+
+    const vectorStore = await getVectorStore();
+
+    (await getEmbeddingsCollection()).deleteMany({});
+
     const loader = new DirectoryLoader(
         "app/", 
         {
@@ -37,7 +46,7 @@ async function generateEmbeddings() {
 
     const splitDocs = await splitter.splitDocuments(docs)
 
-    console.log(splitDocs)
+    await vectorStore.addDocuments(splitDocs);
 }
 
 generateEmbeddings();
