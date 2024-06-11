@@ -2,7 +2,10 @@
 
 import { LangChainStream, StreamingTextResponse } from "ai";
 import { ChatOpenAI } from "@langchain/openai";
-import { ChatPromptTemplate } from "@langchain/core/prompts"
+import { ChatPromptTemplate, PromptTemplate } from "@langchain/core/prompts"
+import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
+import { getVectorStore } from "@/src/libs/astradb";
+import { createRetrievalChain } from "langchain/chains/retrieval";
 
 
 export async function POST(req: Request) {
@@ -19,22 +22,45 @@ export async function POST(req: Request) {
             apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
             modelName: 'gpt-3.5-turbo',
             streaming: true,
-            callbacks: [handlers]
+            callbacks: [handlers],
+            verbose: true,
         });
 
         const prompt = ChatPromptTemplate.fromMessages([
             [
                 "system",
-                "You are a sarcasm bot. You answer all user questions in a sarcastic way."
+                "You are a chatbot for a personal portfolio website. You impersonate the website's owner. " +
+                "Answer the user's questions based on the below context. " +
+                "Whenever it makes sense, provide links to pages that contain more information about the topic from the given context. " +
+                "Format your messages in markdown format.\n\n" +
+                "Context:\n{context}",
             ],
             [
                 "user", "{input}"
             ]
         ])
 
-        const chain = prompt.pipe(chatModel);
+        const combineDocsChain = await createStuffDocumentsChain({
+            llm: chatModel,
+            prompt,
+            documentPrompt: PromptTemplate.fromTemplate(
+                "Page URL: {url}\n\nPage content:\n{page_content}"
+            ),
+            documentSeparator: "\n-------------\n"
+        })
+        
+        const retriever = (await getVectorStore()).asRetriever();
 
-        chain.invoke({
+        const retrievalChain = await createRetrievalChain({
+            combineDocsChain,
+            retriever,
+        });
+
+        // Retrieval chain takes user input, turns it into a vector. It's then used in a similarity search in our
+        // astraDB vector store to find docs similar to user input. It will then pass all these documents to the
+        // createstuffdocumentchain which takes them and puts them into the context field of our prompt
+
+        retrievalChain.invoke({
             input: currentMessageContent
         })
 

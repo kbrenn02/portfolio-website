@@ -1,5 +1,6 @@
 import { AstraDB } from "@datastax/astra-db-ts";
 import { AstraDBVectorStore } from "@langchain/community/vectorstores/astradb"
+// Look at the documentation to correct these imports
 import { OpenAIEmbeddings } from "@langchain/openai";
 
 const endpoint = process.env.ASTRA_DB_ENDPOINT || "";
