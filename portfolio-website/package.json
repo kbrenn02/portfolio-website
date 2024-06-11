@@ -18,7 +18,7 @@
     "dotenv": "^16.4.5",
     "langchain": "^0.2.5",
     "lucide-react": "^0.383.0",
-    "next": "14.2.3",
+    "next": "^14.2.4",
     "next-themes": "^0.3.0",
     "openai": "^4.48.2",
     "react": "^18",
@@ -28,6 +28,7 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "@types/next": "^9.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -38,7 +39,7 @@
     "prettier": "^3.3.1",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.4.5"
   },
   "overrides": {
     "@langchain/core": "0.2.6"

@@ -14,7 +14,7 @@ async function generateEmbeddings() {
 
     const vectorStore = await getVectorStore();
 
-    (await getEmbeddingsCollection()).deleteMany({});
+    // (await getEmbeddingsCollection()).deleteMany({});
 
     const loader = new DirectoryLoader(
         "app/", 
@@ -49,7 +49,7 @@ async function generateEmbeddings() {
 
     const splitDocs = await splitter.splitDocuments(docs)
 
-    await vectorStore.addDocuments(splitDocs);
+    // await vectorStore.addDocuments(splitDocs);
 }
 
 generateEmbeddings();
