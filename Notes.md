@@ -34,3 +34,7 @@ Once the global.css file is updated, update the tailwind.config.ts file so all t
 ### Syntax notes
 - Tailwind classes are mobile first
 - sections are similar to divs
+
+### To deploy on Vercel
+1. Login to Vercel
+2. 

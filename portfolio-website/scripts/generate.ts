@@ -1,52 +1,55 @@
-import dotenv from 'dotenv'
-dotenv.config({path: ".env.local"})
-// Configure .env before other imports
-import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
-import { TextLoader } from "langchain/document_loaders/fs/text";
-import { DocumentInterface } from "@langchain/core/documents"
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { getEmbeddingsCollection, getVectorStore } from "../src/libs/astradb";
+// import dotenv from 'dotenv'
+// dotenv.config({path: ".env.local"})
+// // Configure .env before other imports
+// import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
+// import { TextLoader } from "langchain/document_loaders/fs/text";
+// import { DocumentInterface } from "@langchain/core/documents"
+// import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+// import { getEmbeddingsCollection, getVectorStore } from "../src/libs/astradb";
+// import { Redis } from '@upstash/redis';
 
-async function generateEmbeddings() {
+// async function generateEmbeddings() {
 
-    const vectorStore = await getVectorStore();
+//     await Redis.fromEnv().flushdb();
 
-    (await getEmbeddingsCollection()).deleteMany({});
+//     const vectorStore = await getVectorStore();
 
-    const loader = new DirectoryLoader(
-        "app/", 
-        {
-            // load the .tsx file (this only takes file extensions) aka all the pages of the website, as a string
-            ".tsx": (path) => new TextLoader(path)
-        },
-        true
-    )
+//     (await getEmbeddingsCollection()).deleteMany({});
 
-    const docs = (await loader.load())
-    .filter(doc => doc.metadata.source.endsWith("page.tsx"))
-    .map((doc): DocumentInterface => {
-        // This changes the metadata path in my file to the url extension that brings to this page
-        const url = doc.metadata.source
-            .split("/app")[1]
-            .split("/page.")[0] || "/"
+//     const loader = new DirectoryLoader(
+//         "app/", 
+//         {
+//             // load the .tsx file (this only takes file extensions) aka all the pages of the website, as a string
+//             ".tsx": (path) => new TextLoader(path)
+//         },
+//         true
+//     )
 
-        const pageContentTrimmed = doc.pageContent
-            .replace(/^import.*$/gm, "") // remove all import statements
-            .replace(/ className=(["']).*?\1| className{.*?}/g, "") // Remove all className props
-            .replace(/^\s*[\r]/gm, "") // remove empty lines
-            .trim();
+//     const docs = (await loader.load())
+//     .filter(doc => doc.metadata.source.endsWith("page.tsx"))
+//     .map((doc): DocumentInterface => {
+//         // This changes the metadata path in my file to the url extension that brings to this page
+//         const url = doc.metadata.source
+//             .split("/app")[1]
+//             .split("/page.")[0] || "/"
 
-            return {
-                pageContent: pageContentTrimmed,
-                metadata: { url }
-            };
-    });
+//         const pageContentTrimmed = doc.pageContent
+//             .replace(/^import.*$/gm, "") // remove all import statements
+//             .replace(/ className=(["']).*?\1| className{.*?}/g, "") // Remove all className props
+//             .replace(/^\s*[\r]/gm, "") // remove empty lines
+//             .trim();
 
-    const splitter = RecursiveCharacterTextSplitter.fromLanguage("html");
+//             return {
+//                 pageContent: pageContentTrimmed,
+//                 metadata: { url }
+//             };
+//     });
 
-    const splitDocs = await splitter.splitDocuments(docs)
+//     const splitter = RecursiveCharacterTextSplitter.fromLanguage("html");
 
-    await vectorStore.addDocuments(splitDocs);
-}
+//     const splitDocs = await splitter.splitDocuments(docs)
 
-generateEmbeddings();
+//     await vectorStore.addDocuments(splitDocs);
+// }
+
+// generateEmbeddings();
