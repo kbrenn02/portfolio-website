@@ -42,6 +42,7 @@ const About = () => {
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-start'>Who am I?</H2>
+            {/* Use the below info as a template */}
             <p>
                     {/* <p>
                 My name is Florian Walther and I am a self-taught software developer
@@ -64,17 +65,31 @@ const About = () => {
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-end'>Why am I doing this (programming)?</H2>
+            {/* Add a link that, when clicked, sends the user to the projects tab */}
+            {/* give some background on why I like coding and am doing it - make it vague so
+            if someone from Deloitte finds it, they don't get suspicious */}
             <p></p>
           </section>
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-start'>Why should you care?</H2>
+            {/* Maybe don't have this section, or make it more philantrophic or sarcastic */}
             <p></p>
           </section>
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-end'>How do I fill my free time?</H2>
+            {/* Friends, dancing, pottery, running, climbing, travelling, cooking. Maybe a separate interests section? */}
             <p></p>
+            {/* Photo of me travelling, running, and spending time with friends. pictures should be in a nice grid
+            with two stacked and one larger one next to it*/}
+            <div className=" justify-center">
+              {/* <Image
+                src={kevin}
+                alt="A photo of me"
+                className="aspect-square rounded-full border-2 object-cover shadow-md dark:border-foreground"
+              /> */}
+            </div>
           </section>
 
         </section>
