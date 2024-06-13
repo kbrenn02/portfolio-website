@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-screen">
+    <html lang="en">
       <body className="flex flex-col min-h-screen">
         <ThemeProvider attribute="class">
             <Navbar />
