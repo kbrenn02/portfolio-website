@@ -11,10 +11,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="space-y-16 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-1 py-8">
-      <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
+    <section className="space-y-16 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat mx-auto my-auto py-8 w-9/12 min-h-screen">
+      <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2 max-w-screen-md mx-auto">
         <div className="space-y-3">
           <H1 className="text-center sm:text-start">Hi, I&apos;m Kevin 👋</H1>
+{/* Fill this out more using info I include on my github page */}
           <p className="text-center sm:text-start">
             I&apos;m am full-stack developer in training and am expanding my
             portfolio by creating cool projects.
