@@ -22,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="h-screen">
+      <body className="flex flex-col min-h-screen">
         <ThemeProvider attribute="class">
             <Navbar />
-            <main className="mx-auto max-w-3xl px-3 py-10">{children}</main>
+            <main className="flex-grow mx-auto max-w-3xl px-3 py-10">{children}</main>
             <Footer />
         </ThemeProvider>
       </body>
