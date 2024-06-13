@@ -14,7 +14,7 @@ export default function Home() {
     <section className="space-y-16 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-1 py-8">
       <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
         <div className="space-y-3">
-          <H1 className="text-center sm:text-start">Hi, I&apos;m Kevin</H1>
+          <H1 className="text-center sm:text-start">Hi, I&apos;m Kevin 👋</H1>
           <p className="text-center sm:text-start">
             I&apos;m am full-stack developer in training and am expanding my
             portfolio by creating cool projects.
