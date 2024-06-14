@@ -35,7 +35,7 @@ const About = () => {
                 alt="A photo of me"
                 height={450}
                 width={450}
-                className="aspect-square rounded-3xl border-2 object-cover shadow-lg dark:border-foreground"
+                className="aspect-square rounded-3xl border-2 object-cover shadow-lg dark:border-foreground hover:animate-spin"
               />
             </div>
           </section>
