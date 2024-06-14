@@ -13,7 +13,6 @@ export default function Navbar() {
                 <Link href="/">Home</Link>
                 <Link href="/about">About Me</Link>
                 <Link href="/projects">Projects</Link>
-                <Link href="/social">Social Media</Link>
             </nav>
             <div className="flex items-center gap-6">
                 {/* The AI Chat Button will open the chatbox */}

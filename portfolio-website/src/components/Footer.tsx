@@ -14,7 +14,7 @@ const Footer = () => {
             <Link href="/privacy">Privacy</Link>
         </nav> 
         */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 bg-white px-4 py-2 rounded-full">
             <Link href="https://github.com/kbrenn02">
                 <Image 
                     src={github}
