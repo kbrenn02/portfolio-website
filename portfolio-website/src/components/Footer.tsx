@@ -7,10 +7,13 @@ import instagram from '@/src/assets/instagram.svg';
 
 const Footer = () => {
   return (
-    <footer className='w-max-screen-lg bg-background mx-auto flex flex-wrap justify-between gap-20'>
+    <footer className='w-max-screen-lg bg-background mx-auto flex flex-wrap justify-between gap-20 pb-8'>
+        {/* 
+        --- Unsure if this is necessary for me ---
         <nav className='font-medium flex p-3'>
             <Link href="/privacy">Privacy</Link>
-        </nav>
+        </nav> 
+        */}
         <div className="flex items-center gap-6">
             <Link href="https://github.com/kbrenn02">
                 <Image 
