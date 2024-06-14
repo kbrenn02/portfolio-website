@@ -79,7 +79,7 @@ const About = () => {
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-end'>How do I fill my free time?</H2>
-            {/* Friends, dancing, pottery, running, climbing, travelling, cooking. Maybe a separate interests section? */}
+            {/* Friends, dancing, pottery, running, climbing, travelling, cooking, piano, concerts/music. Maybe a separate interests section? */}
             <p></p>
             {/* Photo of me travelling, running, and spending time with friends. pictures should be in a nice grid
             with two stacked and one larger one next to it*/}
