@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <ThemeProvider attribute="class">
             <Navbar />
-            <main className="flex-grow mx-auto max-w-screen-xl px-3 py-10">{children}</main>
+            <main className="flex-grow mx-auto max-w-screen-xl px-3 py-6">{children}</main>
             <Footer />
         </ThemeProvider>
       </body>

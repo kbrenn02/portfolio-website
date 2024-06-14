@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-        <section className="flex flex-wrap mx-auto w-9/12 space-y-8 px-1 py-4">
+        <section className="flex flex-wrap mx-auto w-10/12 space-y-8 px-1 py-4">
 
-          <H1 className="text-center sm:text-start">About Me</H1>
+          <H1 className="text-center sm:text-start pt-4">About Me</H1>
 
-          <section className="w-full grid grid-cols-1 items-center gap-12 sm:grid-cols-2 pb-4">
+          <section className="w-11/12 grid grid-cols-1 items-center mx-auto gap-12 sm:grid-cols-2 pb-4">
             <div className="space-y-3">
               <div className='flex'>
                 <p className="text-center sm:text-start inline-block mr-10 text-lg">
