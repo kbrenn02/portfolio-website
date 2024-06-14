@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { H1 } from "@/src/components/ui/H1";
 import { H2 } from "@/src/components/ui/H2";
-import kevin from "@/src/assets/K-Headshot.jpg";
+import kevin from "@/src/assets/K-Headshot.png";
 import {Bot} from "lucide-react"
 
 export const metadata: Metadata = {

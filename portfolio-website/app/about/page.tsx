@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { H1 } from "@/src/components/ui/H1";
 import { H2 } from "@/src/components/ui/H2";
-import kevin from "@/src/assets/K-Headshot.jpg";
+import kevin2 from "@/src/assets/K-Headshot2.png";
 
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ const About = () => {
             <div className="space-y-3">
               <div className='flex'>
                 <p className="text-center sm:text-start inline-block mr-10 text-lg">
-                    You will be unsurprised to learn, due to the picture being on the homepage and also in the about me tab, that this is me
+                    You will be unsurprised to learn, due to a similar picture being on the homepage and this one in the about me tab, that this is me!
                 </p>
                 <p className="hidden md:inline-block text-center text-7xl">
                         👉
@@ -31,11 +31,11 @@ const About = () => {
             </div>
             <div className="flex justify-center">
               <Image
-                src={kevin}
+                src={kevin2}
                 alt="A photo of me"
-                height={300}
-                width={300}
-                className="aspect-square rounded-full border-2 object-cover shadow-md dark:border-foreground"
+                height={450}
+                width={450}
+                className="aspect-square rounded-3xl border-2 object-cover shadow-lg dark:border-foreground"
               />
             </div>
           </section>
