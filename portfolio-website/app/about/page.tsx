@@ -73,13 +73,36 @@ const About = () => {
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-start'>Why should you care?</H2>
             {/* Maybe don't have this section, or make it more philantrophic or sarcastic */}
-            <p></p>
+            <p>
+                You don’t necessarily need to. But if you have a problem that can be solved with code, 
+                let me know and I’d love to help solve it. If you have an idea that has a software component, 
+                I’d love to do what I can to bring it to life. If you want to learn how to program, I’m not 
+                even close to an expert but I can offer a starting point and some background. And if you’re a 
+                recruiter, I’m always open to a conversation ;)
+            </p>
+            <p>
+                As I said, this excites me and I like sharing what excites me with people!
+            </p>
           </section>
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-end'>How do I fill my free time?</H2>
             {/* Friends, dancing, pottery, running, climbing, travelling, cooking, piano, concerts/music. Maybe a separate interests section? */}
-            <p></p>
+            <p>
+                I tend to be a bit of a maximalist and say yes to probably too many things.
+            </p>
+            <p>
+                I love spending time with my friends, either hanging out, running, 
+                climbing, doing pottery, going to concerts, or trying new restaurants. 
+            </p>
+            <p>
+                When I’m not with friends, I will still probably be running, or dancing, 
+                cooking, playing piano, coding, or reading. There are a few more hobbies that 
+                I want to pick up too, but it feels like I have enough going on right now.
+            </p>
+            <p>
+                And of course, I love to travel and will take any chance I can to do so!
+            </p>
             {/* Photo of me travelling, running, and spending time with friends. pictures should be in a nice grid
             with two stacked and one larger one next to it*/}
             <div className=" justify-center">
