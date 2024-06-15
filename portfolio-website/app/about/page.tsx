@@ -42,24 +42,15 @@ const About = () => {
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
             <H2 className='text-start'>Who am I?</H2>
-            {/* Use the below info as a template */}
-            <p>
-                    {/* <p>
-                My name is Florian Walther and I am a self-taught software developer
-                from Germany. I started programming in 2017, at the age of 26, and
-                since then I have created hundreds of tutorials on my YouTube channel{" "}
-                <a
-                    href="https://www.youtube.com/codinginflow"
-                    className="text-primary hover:underline"
-                >
-                    Coding in Flow
-                </a>
-                .
-                </p>
-                <p>
-                I&apos;m passionate about building cool apps and websites and I love
-                sharing the things I learn with my audience.
-                </p> */}
+            <p className='text-start'>
+                My name is Kevin Brennan and I am a full-stack software engineer from San Francisco, California. 
+                I was first introduced to programming in college as a one off class, but realized after college 
+                that I loved the challenge and problem-solving involved in programming, and the thrill of actually 
+                making something work and knowing that it’s helping someone else.
+            </p>
+            <p className='text-start'>
+                When I moved to San Francisco, I dived into the world of programming and learned (and am still learning) 
+                as much as I can on the topic, building any and every project that I find interesting.
             </p>
           </section>
 
@@ -68,7 +59,15 @@ const About = () => {
             {/* Add a link that, when clicked, sends the user to the projects tab */}
             {/* give some background on why I like coding and am doing it - make it vague so
             if someone from Deloitte finds it, they don't get suspicious */}
-            <p></p>
+            <p className='text-end'>
+                Programming, coding, web development - it’s all so exciting to me, and in my learning, 
+                I’ve only scratched the surface of what can be done with this skill. I see my friends 
+                contributing to advances in AI and robotics and medicine and sustainability, all with software. 
+            </p>
+            <p className='text-end'>
+                I love seeing how people are using software to solve big problems and change the world. 
+                And I want to do my part - I want to create something that will help the world :) 
+            </p>
           </section>
 
           <section className="max-w-screen-xl mx-auto space-y-3 text-center basis-full">
