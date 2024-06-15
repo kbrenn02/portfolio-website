@@ -26,6 +26,22 @@ const Projects = () => {
             <p className="text-start inline-block mr-10 text-lg">
                 Info about why I make projects
             </p>
+            <p>
+                When it comes to software engineering, I am mostly self-taught, 
+                with two college classes and a bootcamp under my belt as far as formal training goes. 
+                As such, I’m constantly working on new projects to expand the technologies and tools I 
+                can proficiently work in and reinforcing what I have already learned.
+            </p>
+            <p>
+                A lot of my focus has been on full-stack web development in React or Next.js and my strongest 
+                language is Python, but I’m always working to strengthen those skills and expand to other technologies 
+                across the software landscape.
+            </p>
+            <p>
+                I will soon be expanding into mobile app development and, if possible, find avenues for robotics 
+                programming. Again, I’m taking in as much information and learning as I can from the field of software 
+                and all the ways it can be applied.
+            </p>
         </div>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
