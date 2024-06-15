@@ -17,8 +17,8 @@ export default function Home() {
           <H1 className="text-center sm:text-start">Hi, I&apos;m Kevin 👋</H1>
 {/* Fill this out more using info I include on my github page */}
           <p className="text-center sm:text-start">
-            I&apos;m am full-stack developer in training and am expanding my
-            portfolio by creating cool projects.
+            I&apos;m a full-stack software engineer and have fun creating cool projects. I love learning new 
+            things and solving problems.
           </p>
         </div>
         <div className="flex justify-center">
