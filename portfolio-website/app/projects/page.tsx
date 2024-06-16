@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { H1 } from "@/src/components/ui/H1";
 import { H2 } from "@/src/components/ui/H2";
+import chain from '@/src/assets/link.svg';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: "Projects",
@@ -46,7 +48,15 @@ const Projects = () => {
                 <div className='flex flex-col'>
                     <H2 className='text-start pb-4'>Project Title #1</H2>
                     <p className='text-start pb-4 text-xl'>Project description</p>
-                    <p className='text-start pb-4 text-xl'>Source Code</p>
+                    <p className='text-start pb-4 text-xl flex'>
+                        <Link href='https://github.com'>
+                        <Image
+                            src={chain}
+                            alt="Github logo"
+                            className='mr-2 bg-white rounded-lg'
+                        /></Link>
+                        Source Code
+                    </p>
                 </div>
                 <div>
                     <p className='text-start text-xl'>video of project</p>
@@ -59,7 +69,15 @@ const Projects = () => {
                 <div className='flex flex-col'>
                     <H2 className='text-start pb-4'>Project Title #2</H2>
                     <p className='text-start pb-4 text-xl'>Project description</p>
-                    <p className='text-start pb-4 text-xl'>Link to GitHub project</p>
+                    <p className='text-start pb-4 text-xl flex'>
+                        <Link href='https://github.com'>
+                        <Image
+                            src={chain}
+                            alt="Github logo"
+                            className='mr-2 bg-white rounded-lg'
+                        /></Link>
+                        Source Code
+                    </p>
                 </div>
                 <div>
                     <p className='text-start text-xl'>video of project</p>
@@ -72,7 +90,15 @@ const Projects = () => {
                 <div className='flex flex-col'>
                     <H2 className='text-start pb-4'>Project Title #3</H2>
                     <p className='text-start pb-4 text-xl'>Project description</p>
-                    <p className='text-start pb-4 text-xl'>Link to GitHub project</p>
+                    <p className='text-start pb-4 text-xl flex'>
+                        <Link href='https://github.com'>
+                        <Image
+                            src={chain}
+                            alt="Github logo"
+                            className='mr-2 bg-white rounded-lg'
+                        /></Link>
+                        Source Code
+                    </p>
                 </div>
                 <div>
                     <p className='text-start text-xl'>video of project</p>
@@ -85,7 +111,15 @@ const Projects = () => {
                 <div className='flex flex-col'>
                     <H2 className='text-start pb-4'>Project Title #4</H2>
                     <p className='text-start pb-4 text-xl'>Project description</p>
-                    <p className='text-start pb-4 text-xl'>Link to GitHub project</p>
+                    <p className='text-start pb-4 text-xl flex'>
+                        <Link href='https://github.com'>
+                        <Image
+                            src={chain}
+                            alt="Github logo"
+                            className='mr-2 bg-white rounded-lg'
+                        /></Link>
+                        Source Code
+                    </p>
                 </div>
                 <div>
                     <p className='text-start text-xl'>video of project</p>
