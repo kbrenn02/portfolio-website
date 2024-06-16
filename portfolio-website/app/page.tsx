@@ -16,7 +16,7 @@ export default function Home() {
         <div className="space-y-3">
           <H1 className="text-center sm:text-start">Hi, I&apos;m Kevin 👋</H1>
 {/* Fill this out more using info I include on my github page */}
-          <p className="text-center sm:text-start">
+          <p className="text-center sm:text-start text-lg">
             I&apos;m a full-stack software engineer and have fun creating cool projects. I love learning new 
             things and solving problems.
           </p>
@@ -25,15 +25,15 @@ export default function Home() {
           <Image
             src={kevin}
             alt="A photo of me"
-            height={300}
-            width={300}
+            height={350}
+            width={350}
             className="aspect-square rounded-full border-2 object-cover shadow-md dark:border-foreground"
           />
         </div>
       </section>
       <section className="space-y-3 text-center">
         <H2>Ask the chatbot anything about me</H2>
-        <p>
+        <p className="text-lg">
             Click the little <Bot className="inline pb-1" /> icon in the top bar
             to activate the AI chat. You can ask the chatbot any question about me and it will find the relevant
             infor on this website. The bot can even provide links to pages you&apos;re looking for.
