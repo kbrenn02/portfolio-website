@@ -3,3 +3,5 @@ A full stack portfolio website using Next.JS, Langchain, Vercel, OpenAI API, and
 
 #### Run the app 
 - Run `npm run dev` to launch
+
+or go to https://kevinbrennan.vercel.app to view the site live.
