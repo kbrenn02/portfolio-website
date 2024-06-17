@@ -7,10 +7,10 @@ import { H1 } from './ui/H1';
 const TypewriterEffect = () => {
   return (
     <div>
-        <H1>
+        <H1 className="text-center sm:text-start">
           <Typerwriter
             options={{
-                strings: ['Hello', 'World'],
+                strings: ["Hi, I'm Kevin 👋", "I'm a full-stack software engineer", "Explore my website and enjoy!"],
                 autoStart: true,
                 loop: true,
             }}
