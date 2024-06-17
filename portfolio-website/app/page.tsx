@@ -38,9 +38,9 @@ export default function Home() {
             />
         </div>
       </section>
-      <section className="grid grid-cols-2 gap-10">
-        <div className="bg-red-500 rounded-lg"></div>
-        <div className="bg-blue-500 rounded-lg"></div>
+      <section className="grid grid-cols-2 gap-6 max-w-screen-lg">
+        <div className="bg-red-500 rounded-lg w-9/12 h-96 mx-auto"></div>
+        <div className="bg-blue-500 rounded-lg w-9/12 h-96 mx-auto"></div>
       </section>
       <section className="space-y-3 text-center">
         <H2>Ask the chatbot anything about me</H2>
