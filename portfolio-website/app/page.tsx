@@ -4,7 +4,7 @@ import { H1 } from "@/src/components/ui/H1";
 import { H2 } from "@/src/components/ui/H2";
 import kevin from "@/src/assets/K-Headshot.png";
 import {Bot} from "lucide-react";
-import Typerwriter from 'typewriter-effect';
+import TyperwriterEffect from "@/src/components/TypewriterEffect"
 
 export const metadata: Metadata = {
   title: "Kevin Brennan - My Portfolio",
@@ -15,18 +15,10 @@ export default function Home() {
     <section className="space-y-16 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat mx-auto my-auto py-8 w-9/12 min-h-screen">
       <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2 max-w-screen-md mx-auto">
         <div className="space-y-3">
-          <H1 className="text-center sm:text-start">
-            
+          <H1 className="text-center sm:text-start">            
             Hi, I&apos;m Kevin 👋
-          
           </H1>
-          <Typerwriter
-            options={{
-                strings: ['Hello', 'World'],
-                autoStart: true,
-                loop: true,
-            }}
-            />
+          <TyperwriterEffect />
 {/* Fill this out more using info I include on my github page */}
           <p className="text-center sm:text-start text-lg">
             I&apos;m a full-stack software engineer and have fun creating cool projects. I love learning new 
