@@ -4,6 +4,11 @@ import Image from "next/image";
 import { H1 } from "@/src/components/ui/H1";
 import { H2 } from "@/src/components/ui/H2";
 import kevin2 from "@/src/assets/K-Headshot2.png";
+import friends from "@/src/assets/Friends.png"
+import running from "@/src/assets/Running.png"
+import museum from "@/src/assets/Museum.png"
+import travel from "@/src/assets/Traveling.png"
+// import concert from "@/src/a"
 
 
 export const metadata: Metadata = {
@@ -108,16 +113,52 @@ const About = () => {
             </p>
             {/* Photo of me travelling, running, and spending time with friends. pictures should be in a nice grid
             with two stacked and one larger one next to it*/}
-            <div className=" justify-center">
-              {/* <Image
-                src={kevin}
-                alt="A photo of me"
-                className="aspect-square rounded-full border-2 object-cover shadow-md dark:border-foreground"
-              /> */}
-            </div>
           </section>
         </div>
 
+        <section className='pb-12'>
+            <div className="flex flex-row gap-6 flex-wrap">
+                <div className='flex flex-row gap-6'>
+                    <div>
+                        <Image
+                            src={friends}
+                            alt="Me and my friends"
+                            height={600}
+                            className="rounded-lg border-2 object-cover shadow-md dark:border-foreground flex-auto basis-2/3"
+                        />
+                    </div>
+
+                    <div>
+                        <Image
+                            src={travel}
+                            alt="Photo of me in Paris, leaning against the either tower"
+                            height={600}
+                            className=" rounded-lg border-2 object-cover shadow-md dark:border-foreground flex-auto basis-1/3"
+                        />
+                    </div>
+                </div>
+            
+                <div className='flex flex-row gap-6'>
+                    <div>
+                        <Image
+                            src={museum}
+                            alt="Photo of me in the SF MOMA"
+                            height={600}
+                            className=" rounded-lg border-2 object-cover shadow-md dark:border-foreground flex-auto basis-1/3"
+                        />
+                    </div>
+
+                    <div>
+                        <Image
+                            src={running}
+                            alt="Bay to Breakes 2024"
+                            height={600}
+                            className=" rounded-lg border-2 object-cover shadow-md dark:border-foreground flex-auto basis-2/3"
+                        />
+                    </div>
+                </div>
+            </div>
+          </section>
         </section>
   )
 }
