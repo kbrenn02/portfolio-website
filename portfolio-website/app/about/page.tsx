@@ -117,8 +117,8 @@ const About = () => {
         </div>
 
         <section className='pb-12'>
-            <div className="flex flex-row gap-6 flex-wrap">
-                <div className='flex flex-row gap-6'>
+            <div className="grid grid-rows-2 grid-cols-5 gap-6 flex-wrap">
+                <div className='flex flex-row gap-6 col-span-3 my-auto'>
                     <div>
                         <Image
                             src={friends}
@@ -137,8 +137,14 @@ const About = () => {
                         />
                     </div>
                 </div>
+
+                <div className='col-span-2 row-span-2 my-auto'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/Concerts.MOV" type="video/mp4" />
+                    </video>
+                </div>
             
-                <div className='flex flex-row gap-6'>
+                <div className='flex flex-row gap-6 col-span-3 my-auto'>
                     <div>
                         <Image
                             src={museum}
@@ -157,11 +163,7 @@ const About = () => {
                         />
                     </div>
                 </div>
-                <div>
-                    <video width="600" controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
-                        <source src="/Concerts.MOV" type="video/mp4" />
-                    </video>
-                </div>
+                
             </div>
           </section>
         </section>
