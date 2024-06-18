@@ -157,6 +157,11 @@ const About = () => {
                         />
                     </div>
                 </div>
+                <div>
+                    <video width="600" controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/Concerts.MOV" type="video/mp4" />
+                    </video>
+                </div>
             </div>
           </section>
         </section>
