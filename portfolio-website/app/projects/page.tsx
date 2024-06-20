@@ -25,18 +25,18 @@ const Projects = () => {
         <H1 className="text-center sm:text-start pt-4 block">Projects</H1>
 
         <div className='block w-full space-y-6'>
-            <p className='text-xl'>
+            <p className='text-xl leading-relaxed'>
                 When it comes to software engineering, I am mostly self-taught, 
                 with two college classes and a bootcamp under my belt as far as formal training goes. 
                 As such, I’m constantly working on new projects to expand the technologies and tools I 
                 can proficiently work in and reinforcing what I have already learned.
             </p>
-            <p className='text-xl'>
+            <p className='text-xl leading-relaxed'>
                 A lot of my focus has been on full-stack web development in React or Next.js and my strongest 
                 language is Python, but I’m always working to strengthen those skills and expand to other technologies 
                 across the software landscape.
             </p>
-            <p className='text-xl'>
+            <p className='text-xl leading-relaxed'>
                 I will soon be expanding into mobile app development and, if possible, find avenues for robotics 
                 programming. Again, I’m taking in as much information and learning as I can from the field of software 
                 and all the ways it can be applied.
@@ -49,10 +49,13 @@ const Projects = () => {
                     <H2 className='text-start pb-4'>Famiigo</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         Client application for an events dashboard. Users are able to log in an find family-friendly 
-                        events in a range of categories.
+                        events in a range of categories. New events and locations can be added, with location accuracy 
+                        improved by using the Google Maps API and accounts/authentication aided by Clerk. The best part 
+                        is that this project has a trove of seed data to give a realistic view of what the application 
+                        will look like when it is fully rolled out.
                     </p>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
-                        Technology: NextJS, Prisma, Postgres, Docker, Tailwind, DaisyUI, and Cypress (for testing)
+                        Technology: Next.JS, Prisma, Postgres, Docker, Tailwind, DaisyUI, Clerk, and Cypress
                     </p>
                     <p className='text-start pb-4 text-xl flex'>
                         <Image
@@ -60,10 +63,10 @@ const Projects = () => {
                             alt="Github logo"
                             className='mr-2 bg-white rounded-lg'
                         />
-                        Will not be providing source code as this is a client project.
+                        Will not be providing source code for client projects.
                     </p>
                 </div>
-                <div className='w-1/2 justify-center items-center'>
+                <div className='w-1/2 justify-center items-center pl-4'>
                     <p className='text-start text-xl'>video of project</p>
                     {/* need to screen record the videos on my laptop then upload to the assets folder */}
                 </div>
@@ -72,11 +75,19 @@ const Projects = () => {
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
             <div className='flex w-full justify-between'>
-                <div className='flex flex-col'>
-                    <H2 className='text-start pb-4'>Project Title #2</H2>
-                    <p className='text-start pb-4 text-xl'>Project description</p>
+                <div className='flex flex-col w-1/2'>
+                    <H2 className='text-start pb-4'>Task Manager</H2>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Have a lot to do and feeling scattered? This personal task manager can be used to track items 
+                        that users need to complete. The homepage dashboard presents a concise summary of the status of 
+                        all tasks (in a visually appealing donut chart), as well as the most pressing item (the item that 
+                        is coming due next). An easy way for any to organize their busy life.
+                    </p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Technology: Next.JS, Tailwind CSS, Radix UI, MySQL, Prisma
+                    </p>
                     <p className='text-start pb-4 text-xl flex'>
-                        <Link href='https://github.com'>
+                        <Link href='https://github.com/kbrenn02/joy-of-coding-internship-solo-project'>
                         <Image
                             src={chain}
                             alt="Github logo"
@@ -85,7 +96,7 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div>
+                <div className='w-1/2 justify-center items-center pl-4'>
                     <p className='text-start text-xl'>video of project</p>
                 </div>
             </div>
@@ -93,11 +104,19 @@ const Projects = () => {
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
             <div className='flex w-full justify-between'>
-                <div className='flex flex-col'>
-                    <H2 className='text-start pb-4'>Project Title #3</H2>
-                    <p className='text-start pb-4 text-xl'>Project description</p>
+                <div className='flex flex-col w-1/2'>
+                    <H2 className='text-start pb-4'>E-Commerce Platform</H2>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        A fully responsive e-commerce platform, this project was built in three distinct parts: frontend, 
+                        backend, and admin panel. API connections were built in the backend to create a seemless experience 
+                        for administrators to add or remove products. All that is missing a connection to a payments platform 
+                        on the checkout page.
+                    </p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Technology: React JS, MongoDB, Express, NodeJS
+                    </p>
                     <p className='text-start pb-4 text-xl flex'>
-                        <Link href='https://github.com'>
+                        <Link href='https://github.com/kbrenn02/ecommerce-platform'>
                         <Image
                             src={chain}
                             alt="Github logo"
@@ -106,7 +125,7 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div>
+                <div className='w-1/2 justify-center items-center pl-4'>
                     <p className='text-start text-xl'>video of project</p>
                 </div>
             </div>
@@ -114,11 +133,19 @@ const Projects = () => {
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
             <div className='flex w-full justify-between'>
-                <div className='flex flex-col'>
-                    <H2 className='text-start pb-4'>Project Title #4</H2>
-                    <p className='text-start pb-4 text-xl'>Project description</p>
+                <div  className='flex flex-col w-1/2'>
+                    <H2 className='text-start pb-4'>Dear Diary - A Django Blog</H2>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        A Django blog that serves more as a community space for people to write articles on topics 
+                        they find interesting, and sharing them with anyone who comes across the website. Page protections 
+                        allow only users who are signed in to create new articles, but everyone is able to read them. As this 
+                        was created using Django, there is a built in admin panel for admins to control users and articles published.
+                    </p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Technology: Django
+                    </p>
                     <p className='text-start pb-4 text-xl flex'>
-                        <Link href='https://github.com'>
+                        <Link href='https://github.com/kbrenn02/Django-blog'>
                         <Image
                             src={chain}
                             alt="Github logo"
@@ -127,7 +154,36 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div>
+                <div className='w-1/2 justify-center items-center pl-4'>
+                    <p className='text-start text-xl'>video of project</p>
+                </div>
+            </div>
+        </section>
+
+        <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
+            <div className='flex w-full justify-between'>
+                <div  className='flex flex-col w-1/2'>
+                    <H2 className='text-start pb-4'>Stock Price Tracker</H2>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        A simple stock price tracker where the user is able to enter the ticker of the companies they 
+                        are interested in tracking and see on a dashboard all the stocks they picked out. Data is updated 
+                        every 10 seconds using the yfinance API, and the total stock movement for the day is included on 
+                        each stock card. Now with Bitcoin too!
+                    </p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Technology: Python, Flask, JavaScript, yfinance API
+                    </p>
+                    <p className='text-start pb-4 text-xl flex'>
+                        <Link href='https://github.com/kbrenn02/stock-price-tracker'>
+                        <Image
+                            src={chain}
+                            alt="Github logo"
+                            className='mr-2 bg-white rounded-lg'
+                        /></Link>
+                        Source Code
+                    </p>
+                </div>
+                <div className='w-1/2 justify-center items-center pl-4'>
                     <p className='text-start text-xl'>video of project</p>
                 </div>
             </div>
