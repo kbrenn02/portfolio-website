@@ -44,22 +44,23 @@ const Projects = () => {
         </div>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
-            <div className='flex w-full justify-between'>
-                <div className='flex flex-col'>
-                    <H2 className='text-start pb-4'>Project Title #1</H2>
-                    <p className='text-start pb-4 text-xl'>Project description</p>
+            <div className='flex flex-row w-full justify-between'>
+                <div className='flex flex-col w-1/2'>
+                    <H2 className='text-start pb-4'>Famiigo</H2>
+                    <p className='text-start pb-4 text-xl'>Client application using NextJS, Prisma, Postgres, Docker, Tailwind, DaisyUI, and Cypress (for testing)</p>
                     <p className='text-start pb-4 text-xl flex'>
-                        <Link href='https://github.com'>
+                        {/* <Link href='https://github.com'>
                         <Image
                             src={chain}
                             alt="Github logo"
                             className='mr-2 bg-white rounded-lg'
-                        /></Link>
-                        Source Code
+                        /></Link> */}
+                        Source Code -- will not be providing source code as this is a client project.
                     </p>
                 </div>
-                <div>
+                <div className='w-1/2 justify-center items-center'>
                     <p className='text-start text-xl'>video of project</p>
+                    {/* need to screen record the videos on my laptop then upload to the assets folder */}
                 </div>
             </div>
         </section>
