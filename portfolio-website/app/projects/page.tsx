@@ -47,15 +47,20 @@ const Projects = () => {
             <div className='flex flex-row w-full justify-between'>
                 <div className='flex flex-col w-1/2'>
                     <H2 className='text-start pb-4'>Famiigo</H2>
-                    <p className='text-start pb-4 text-xl'>Client application using NextJS, Prisma, Postgres, Docker, Tailwind, DaisyUI, and Cypress (for testing)</p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Client application for an events dashboard. Users are able to log in an find family-friendly 
+                        events in a range of categories.
+                    </p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Technology: NextJS, Prisma, Postgres, Docker, Tailwind, DaisyUI, and Cypress (for testing)
+                    </p>
                     <p className='text-start pb-4 text-xl flex'>
-                        {/* <Link href='https://github.com'>
                         <Image
                             src={chain}
                             alt="Github logo"
                             className='mr-2 bg-white rounded-lg'
-                        /></Link> */}
-                        Source Code -- will not be providing source code as this is a client project.
+                        />
+                        Will not be providing source code as this is a client project.
                     </p>
                 </div>
                 <div className='w-1/2 justify-center items-center'>
