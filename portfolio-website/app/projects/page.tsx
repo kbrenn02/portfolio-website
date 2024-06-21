@@ -66,9 +66,10 @@ const Projects = () => {
                         Will not be providing source code for client projects.
                     </p>
                 </div>
-                <div className='w-1/2 justify-center items-center pl-4'>
-                    <p className='text-start text-xl'>video of project</p>
-                    {/* need to screen record the videos on my laptop then upload to the assets folder */}
+                <div className='w-1/2 mx-auto my-auto pl-4'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/Famiigo.mov" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>
@@ -96,8 +97,10 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 justify-center items-center pl-4'>
-                    <p className='text-start text-xl'>video of project</p>
+                <div className='w-1/2 mx-auto my-auto pl-4'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/TaskManager.mov" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>
@@ -125,8 +128,10 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 justify-center items-center pl-4'>
-                    <p className='text-start text-xl'>video of project</p>
+                <div className='w-1/2 mx-auto my-auto pl-4'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/ECommerce.mov" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>
@@ -154,8 +159,10 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 justify-center items-center pl-4'>
-                    <p className='text-start text-xl'>video of project</p>
+                <div className='w-1/2 mx-auto my-auto pl-4'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/DjangoBlog.mov" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>
@@ -183,8 +190,10 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 justify-center items-center pl-4'>
-                    <p className='text-start text-xl'>video of project</p>
+                <div className='w-1/2 mx-auto my-auto pl-4'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/StockPriceTracker.mov" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>
