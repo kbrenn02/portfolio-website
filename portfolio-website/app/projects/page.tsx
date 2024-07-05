@@ -198,6 +198,34 @@ const Projects = () => {
             </div>
         </section>
 
+        {/* <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
+            <div className='flex w-full justify-between'>
+                <div  className='flex flex-col w-1/2'>
+                    <H2 className='text-start pb-4'>Aora - Video Sharing App</H2>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        
+                    </p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Technology: React Native, NativeWind, Appwrite.io
+                    </p>
+                    <p className='text-start pb-4 text-xl flex'>
+                        <Link href='https://github.com/kbrenn02/reactnative'>
+                        <Image
+                            src={chain}
+                            alt="Github logo"
+                            className='mr-2 bg-white rounded-lg'
+                        /></Link>
+                        Source Code
+                    </p>
+                </div>
+                <div className='w-1/2 mx-auto my-auto pl-4'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+        </section> */}
+
   </section>
   )
 }
