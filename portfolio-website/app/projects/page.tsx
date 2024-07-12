@@ -198,12 +198,17 @@ const Projects = () => {
             </div>
         </section>
 
-        {/* <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
+        <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
             <div className='flex w-full justify-between'>
                 <div  className='flex flex-col w-1/2'>
                     <H2 className='text-start pb-4'>Aora - Video Sharing App</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
-                        
+                        A friendly video sharing app built using React Native. It has all the features you would expect
+                        of an app store level app, with log in/sign up, a home page showing the latest videos, a search
+                        feature, the ability to upload videos from your camera roll, and a profile that tracks all the videos
+                        you've uploaded to the site. All data is stored in Appwrite.io, allowing easy scability to multiple
+                        users, as well as ease in adding new features, such as "favorite" or "hidden" categories for videos
+                        on one's profile.
                     </p>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         Technology: React Native, NativeWind, Appwrite.io
@@ -218,13 +223,22 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 mx-auto my-auto pl-4'>
-                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
-                        <source src="/" type="video/mp4" />
-                    </video>
+                <div className='w-1/2 mx-auto my-auto pl-4 flex flex-row'>
+                    <div>
+                        <video width={250} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                            <source src="/Aora_Pt.1.mov" type="video/mp4" />
+                        </video>
+                        <p className='justify-center items-center text-center'>Part 1</p>
+                    </div>
+                    <div>
+                        <video width={250} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                            <source src="/Aora_Pt.2.mov" type="video/mp4" />
+                        </video>
+                        <p className='justify-center items-center text-center'>Part 2</p>
+                    </div>
                 </div>
             </div>
-        </section> */}
+        </section>
 
   </section>
   )
