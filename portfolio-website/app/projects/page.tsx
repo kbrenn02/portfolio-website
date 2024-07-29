@@ -206,9 +206,9 @@ const Projects = () => {
                         A friendly video sharing app built using React Native. It has all the features you would expect
                         of an app store level app, with log in/sign up, a home page showing the latest videos, a search
                         feature, the ability to upload videos from your camera roll, and a profile that tracks all the videos
-                        you've uploaded to the site. All data is stored in Appwrite.io, allowing easy scability to multiple
-                        users, as well as ease in adding new features, such as "favorite" or "hidden" categories for videos
-                        on one's profile.
+                        you have uploaded to the site. All data is stored in Appwrite.io, allowing easy scability to multiple
+                        users, as well as ease in adding new features, such as Favorite or Hidden categories for videos
+                        on one&aposs profile.
                     </p>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         Technology: React Native, NativeWind, Appwrite.io
