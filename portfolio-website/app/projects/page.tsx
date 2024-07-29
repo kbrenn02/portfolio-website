@@ -208,7 +208,7 @@ const Projects = () => {
                         feature, the ability to upload videos from your camera roll, and a profile that tracks all the videos
                         you have uploaded to the site. All data is stored in Appwrite.io, allowing easy scability to multiple
                         users, as well as ease in adding new features, such as Favorite or Hidden categories for videos
-                        on one&aposs profile.
+                        on one&apos;s profile.
                     </p>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         Technology: React Native, NativeWind, Appwrite.io
