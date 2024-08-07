@@ -48,17 +48,16 @@ export default function Home() {
     </section>
 
 
-    <section className="mx-auto my-auto sm:my-0 sm:mx-4">
+    <section className="mx-auto my-auto">
       
-      <section className="flex flex-col sm:flex-row gap-6 sm:gap-0 max-w-screen-lg pb-32 mx-auto">
-        <div className="relative first-letter:rounded-lg w-9/12 sm:w-full h-96 sm:h-0.5 mx-auto">
+      <section className="flex flex-col sm:flex-row gap-6 max-w-screen-lg pb-32 mx-auto">
+        <div className="relative first-letter:rounded-lg w-9/12 h-96 mx-auto">
             <Link href='/about'>
                 <div className="rounded-lg absolute inset-0 flex items-end justify-center">
                     <Image
                         src={aboutMe}
                         alt="Background Image"
                         height={384}
-                        // width={384}
                         className="rounded-lg border-2 object-cover shadow-md dark:border-foreground"
                     />
                 </div>
@@ -70,14 +69,13 @@ export default function Home() {
             </Link>
         </div>
         
-        <div className="relative first-letter:rounded-lg w-9/12 sm:w-full h-96 sm:h-0.5 mx-auto">
+        <div className="relative first-letter:rounded-lg w-9/12 h-96 mx-auto">
             <Link href='/projects'>
                 <div className="rounded-lg absolute inset-0 flex items-end justify-center">
                     <Image
                         src={coding}
                         alt="Background Image"
                         height={384}
-                        // width={375}
                         className="rounded-lg border-2 object-cover shadow-md dark:border-foreground"
                     />
                 </div>

@@ -44,8 +44,8 @@ const Projects = () => {
         </div>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
-            <div className='flex flex-row w-full justify-between'>
-                <div className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between'>
+                <div className='w-full sm:w-1/2'>
                     <H2 className='text-start pb-4'>Famiigo</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         Client application for an events dashboard. Users are able to log in an find family-friendly 
@@ -66,7 +66,7 @@ const Projects = () => {
                         Will not be providing source code for client projects.
                     </p>
                 </div>
-                <div className='w-1/2 mx-auto my-auto pl-4'>
+                <div className='w-full sm:w-1/2 mx-auto my-auto pl-4'>
                     <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
                         <source src="/Famiigo.mov" type="video/mp4" />
                     </video>
@@ -75,8 +75,8 @@ const Projects = () => {
         </section>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
-            <div className='flex w-full justify-between'>
-                <div className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between'>
+                <div className='w-full sm:w-1/2'>
                     <H2 className='text-start pb-4'>Task Manager</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         Have a lot to do and feeling scattered? This personal task manager can be used to track items 
@@ -97,7 +97,7 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 mx-auto my-auto pl-4'>
+                <div className='w-full sm:w-1/2 mx-auto my-auto pl-4'>
                     <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
                         <source src="/TaskManager.mov" type="video/mp4" />
                     </video>
@@ -106,8 +106,8 @@ const Projects = () => {
         </section>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
-            <div className='flex w-full justify-between'>
-                <div className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between'>
+                <div className='w-full sm:w-1/2'>
                     <H2 className='text-start pb-4'>E-Commerce Platform</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         A fully responsive e-commerce platform, this project was built in three distinct parts: frontend, 
@@ -128,7 +128,7 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 mx-auto my-auto pl-4'>
+                <div className='w-full sm:w-1/2 mx-auto my-auto pl-4'>
                     <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
                         <source src="/ECommerce.mov" type="video/mp4" />
                     </video>
@@ -137,8 +137,8 @@ const Projects = () => {
         </section>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
-            <div className='flex w-full justify-between'>
-                <div  className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between'>
+                <div  className='w-full sm:w-1/2'>
                     <H2 className='text-start pb-4'>Dear Diary - A Django Blog</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         A Django blog that serves more as a community space for people to write articles on topics 
@@ -159,7 +159,7 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 mx-auto my-auto pl-4'>
+                <div className='w-full sm:w-1/2 mx-auto my-auto pl-4'>
                     <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
                         <source src="/DjangoBlog.mov" type="video/mp4" />
                     </video>
@@ -168,8 +168,8 @@ const Projects = () => {
         </section>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
-            <div className='flex w-full justify-between'>
-                <div  className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between'>
+                <div  className='w-full sm:w-1/2'>
                     <H2 className='text-start pb-4'>Stock Price Tracker</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         A simple stock price tracker where the user is able to enter the ticker of the companies they 
@@ -190,7 +190,7 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 mx-auto my-auto pl-4'>
+                <div className='w-full sm:w-1/2 mx-auto my-auto pl-4'>
                     <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
                         <source src="/StockPriceTracker.mov" type="video/mp4" />
                     </video>
@@ -199,8 +199,8 @@ const Projects = () => {
         </section>
 
         <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
-            <div className='flex w-full justify-between'>
-                <div  className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:flex-row w-full justify-between'>
+                <div  className='w-full sm:w-1/2'>
                     <H2 className='text-start pb-4'>Aora - Video Sharing App</H2>
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         A friendly video sharing app built using React Native. It has all the features you would expect
@@ -223,14 +223,14 @@ const Projects = () => {
                         Source Code
                     </p>
                 </div>
-                <div className='w-1/2 mx-auto my-auto pl-4 flex flex-row'>
-                    <div>
+                <div className='w-full sm:w-1/2 mx-auto my-auto sm:pl-4 flex flex-col sm:flex-row'>
+                    <div className='mx-auto'>
                         <video width={250} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
                             <source src="/Aora_Pt.1.mov" type="video/mp4" />
                         </video>
                         <p className='justify-center items-center text-center'>Part 1</p>
                     </div>
-                    <div>
+                    <div className='mx-auto'>
                         <video width={250} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
                             <source src="/Aora_Pt.2.mov" type="video/mp4" />
                         </video>
