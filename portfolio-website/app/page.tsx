@@ -48,52 +48,56 @@ export default function Home() {
     </section>
 
 
-    <section className="mx-auto my-auto">
+    <section className="mx-auto my-auto sm:my-0 sm:mx-4">
       
-      <section className="grid grid-cols-2 gap-6 max-w-screen-lg pb-32 mx-auto">
-        <div className="relative first-letter:rounded-lg w-9/12 h-96 mx-auto">
+      <section className="flex flex-col sm:flex-row gap-6 sm:gap-0 max-w-screen-lg pb-32 mx-auto">
+        <div className="relative first-letter:rounded-lg w-9/12 sm:w-full h-96 sm:h-0.5 mx-auto">
             <Link href='/about'>
-                <Image
-                    src={aboutMe}
-                    alt="Background Image"
-                    height={396}
-                    // width={384}
-                    className="rounded-lg border-2 object-cover shadow-md dark:border-foreground"
-                />
-            <div className="rounded-lg absolute inset-0 flex items-end justify-center">
-                <div className="rounded-lg w-full bg-gradient-to-t from-blue-400 to-transparent p-4">
-                    <H1 className="text-white text-center">About Me</H1>
+                <div className="rounded-lg absolute inset-0 flex items-end justify-center">
+                    <Image
+                        src={aboutMe}
+                        alt="Background Image"
+                        height={384}
+                        // width={384}
+                        className="rounded-lg border-2 object-cover shadow-md dark:border-foreground"
+                    />
                 </div>
-            </div>
+                <div className="rounded-lg absolute inset-0 flex items-end justify-center">
+                    <div className="rounded-lg w-[380px] bg-gradient-to-t from-blue-400 to-transparent p-4">
+                        <H1 className="text-white text-center">About Me</H1>
+                    </div>
+                </div>
             </Link>
         </div>
         
-        <div className="relative first-letter:rounded-lg w-9/12 h-96 mx-auto">
+        <div className="relative first-letter:rounded-lg w-9/12 sm:w-full h-96 sm:h-0.5 mx-auto">
             <Link href='/projects'>
-                <Image
-                    src={coding}
-                    alt="Background Image"
-                    height={384}
-                    // width={375}
-                    className="rounded-lg border-2 object-cover shadow-md dark:border-foreground"
-                />
-            <div className="rounded-lg absolute inset-0 flex items-end justify-center">
-                <div className="rounded-lg w-96 bg-gradient-to-t from-green-400 to-transparent p-4">
-                    <H1 className="text-white text-center">My Projects</H1>
+                <div className="rounded-lg absolute inset-0 flex items-end justify-center">
+                    <Image
+                        src={coding}
+                        alt="Background Image"
+                        height={384}
+                        // width={375}
+                        className="rounded-lg border-2 object-cover shadow-md dark:border-foreground"
+                    />
                 </div>
-            </div>
+                <div className="rounded-lg absolute inset-0 flex items-end justify-center">
+                    <div className="rounded-lg w-[380px] bg-gradient-to-t from-green-400 to-transparent p-4">
+                        <H1 className="text-white text-center">My Projects</H1>
+                    </div>
+                </div>
             </Link>
         </div>
       </section>
 
-      <section className="space-y-3 text-center mx-auto pb-12">
+      {/* <section className="space-y-3 text-center mx-auto pb-12">
         <H2>Ask the chatbot anything about me</H2>
         <p className="text-lg mx-auto w-9/12">
             Click the little <Bot className="inline pb-1" /> icon in the top bar
             to activate the AI chat. You can ask the chatbot any question about me and it will find the relevant
             infor on this website. The bot can even provide links to pages you&apos;re looking for.
         </p>
-      </section>
+      </section> */}
 
     </section>
     </>
