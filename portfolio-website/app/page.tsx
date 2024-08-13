@@ -16,15 +16,16 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-    <section className="space-y-16 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat mx-auto my-auto pt-8 w-10/12 min-h-screen">
+    <section className="space-y-16 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat mx-auto my-auto pt-8 w-full min-h-screen
+    flex flex-wrap px-1 py-4">
       
-      <section className="flex justify-center gap-16 pt-24 max-w-screen-md mx-auto">
+      <section className="flex justify-center gap-16 pt-24 w-full mx-auto">
         <div className="items-center space-y-3">
           <TyperwriterEffect />
         </div>
       </section>
       
-      <section>
+      <section className="w-full">
         <div className="flex justify-center">
             <Image
                 src={kevin}
