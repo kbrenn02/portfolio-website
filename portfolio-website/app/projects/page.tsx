@@ -247,7 +247,7 @@ const Projects = () => {
                     <p className='text-start pb-4 text-sm leading-relaxed'>
                         A fun Spotify-esque music web app. You are able to search through the top artists and songs, discover
                         the top songs in your country, and check out the top songs in various genres. Once clicking into a
-                        song, you're able to see all the song lyrics in one place. When clicking into an artist, you can
+                        song, you&apos;re able to see all the song lyrics in one place. When clicking into an artist, you can
                         see their name, genre, and top hits! This was a fun app to build using the Shazam core API. The
                         challenge was that some of the API calls were v2 and some were v1 (without a v2 released), so the data
                         output by the API calls were in different forms. It made the React components a little less usable in some
