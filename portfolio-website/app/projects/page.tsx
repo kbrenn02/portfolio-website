@@ -240,6 +240,42 @@ const Projects = () => {
             </div>
         </section>
 
+        <section className="max-w-screen-xl mx-auto space-y-3 basis-full py-2">
+            <div className='flex flex-col sm:flex-row w-full justify-between'>
+                <div  className='w-full sm:w-1/2'>
+                    <H2 className='text-start pb-4'>Lyriks - Spotify Clone</H2>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        A fun Spotify-esque music web app. You are able to search through the top artists and songs, discover
+                        the top songs in your country, and check out the top songs in various genres. Once clicking into a
+                        song, you're able to see all the song lyrics in one place. When clicking into an artist, you can
+                        see their name, genre, and top hits! This was a fun app to build using the Shazam core API. The
+                        challenge was that some of the API calls were v2 and some were v1 (without a v2 released), so the data
+                        output by the API calls were in different forms. It made the React components a little less usable in some
+                        places, but overall was not a big deal.
+                        *Note: The Shazam API cost a monthly fee to do this project. I stopped paying the fee, so trying to run
+                        the code for this project will not work.
+                    </p>
+                    <p className='text-start pb-4 text-sm leading-relaxed'>
+                        Technology: React, Shazam Core API
+                    </p>
+                    <p className='text-start pb-4 text-xl flex'>
+                        <Link href='https://github.com/kbrenn02/music-player'>
+                        <Image
+                            src={chain}
+                            alt="Github logo"
+                            className='mr-2 bg-white rounded-lg'
+                        /></Link>
+                        Source Code
+                    </p>
+                </div>
+                <div className='w-full sm:w-1/2 mx-auto my-auto pl-4'>
+                    <video width={500} controls className='rounded-lg border-2 shadow-md dark:border-foreground'>
+                        <source src="/music-app.mov" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+        </section>
+
   </section>
   )
 }
